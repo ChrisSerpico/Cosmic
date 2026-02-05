@@ -3355,7 +3355,7 @@
   <imgdir name="1031">
     <imgdir name="0">
       <string name="0" value="Hello there! You must be new! So your name is... #h0#? Nice to meet you! I&apos;m sure you still feel a bit uncertain about being in the world of Maple. But don&apos;t you worry about a thing! This world welcomes you with open arms."/>
-      <string name="1" value="Hey there! To start a conversation with us, just #bclick#k us, and we&apos;ll be talking to you in no time. You can talk to any person or object that displays a blinking mouse icon when you place your mouse cursor over them."/>
+      <string name="1" value="To start a conversation with us, just #bclick#k us, and we&apos;ll be talking to you in no time. You can talk to any person or object that displays a blinking mouse icon when you place your mouse cursor over them."/>
       <string name="2" value="You should also know that #banyone with a light bulb above their head will have a quest for you#k. Those people are dying to talk to you, so if you see any one of them, do not hesitate to click!"/>
       <string name="3" value="Oh yeah, I just remembered that #bSera#k has been looking for a new traveler to talk to. What do you think? Do you want to say hello to Sera?"/>
       <imgdir name="yes">
