@@ -3697,17 +3697,17 @@
   </imgdir>
   <imgdir name="2100">
     <string name="name" value="Sera"/>
-    <string name="n0" value="It&apos;s a neverending pile of laundry I&apos;ll be hanging around here."/>
+    <string name="n0" value="This pile of laundry is never ending..."/>
     <string name="n1" value="Have you met my sister Heena before?"/>
-    <string name="n2" value="Press? and you&apos;ll be able to climb up the ladder or a rope."/>
-    <string name="n3" value="Click on us, and you&apos;ll be able to talk to us."/>
+    <string name="n2" value="Press up and you&apos;ll be able to climb up the ladder or a rope."/>
+    <string name="n3" value="Click on us if you&apos;d like to talk."/>
     <string name="a0" value="Why isn&apos;t Heena helping me hang all this laundry?"/>
-    <string name="s0" value="You must be on you first journey, am I right?"/>
+    <string name="s0" value="You must be on your first journey, am I right?"/>
     <string name="i0" value="What should I make for dinner...?"/>
-    <string name="l0" value="Oh my gosh, my laundry! still left to do..."/>
-    <string name="h0" value="Haven&apos;t washed my hair in days...and..."/>
-    <string name="d0" value="It is a fine day to do the laundry~ Don&apos;t you think so?"/>
-    <string name="d1" value="Did you give my mirror to #g#p2101##k? When will she help me to do this..."/>
+    <string name="l0" value="Oh my gosh, my laundry! Still so much left to do..."/>
+    <string name="h0" value="Haven&apos;t washed my hair in days... and..."/>
+    <string name="d0" value="It&apos;s a fine day to do the laundry~ Don&apos;t you think?"/>
+    <string name="d1" value="Did you give my mirror to #g#p2101##k? Now when will she help me with this laundry...?"/>
   </imgdir>
   <imgdir name="21000">
     <string name="name" value="Pan"/>
