@@ -3699,7 +3699,7 @@
     <string name="name" value="Sera"/>
     <string name="n0" value="This pile of laundry is never ending..."/>
     <string name="n1" value="Have you met my sister Heena before?"/>
-    <string name="n2" value="Press up and you&apos;ll be able to climb up the ladder or a rope."/>
+    <string name="n2" value="Press Up and you&apos;ll be able to climb up the ladder or a rope."/>
     <string name="n3" value="Click on us if you&apos;d like to talk."/>
     <string name="a0" value="Why isn&apos;t Heena helping me hang all this laundry?"/>
     <string name="s0" value="You must be on your first journey, am I right?"/>
@@ -3781,14 +3781,14 @@
   <imgdir name="2101">
     <string name="name" value="Heena"/>
     <string name="n0" value="Beautiful day today!"/>
-    <string name="n1" value="Press left Alt key and  you&apos;ll be able to jump."/>
+    <string name="n1" value="Press Left Alt and you&apos;ll be able to jump."/>
     <string name="n2" value="Press the arrow keys to move around here and there."/>
     <string name="s0" value="Ha!"/>
     <string name="s1" value="Hehe..."/>
     <string name="s2" value="How&apos;s the travelling?"/>
-    <string name="b0" value="Whoa...you look new in this."/>
+    <string name="b0" value="Whoa... you look new to this."/>
     <string name="c0" value="Arrghh, my beautiful skin..."/>
-    <string name="d0" value="You must be a new traveller. I will give some instructions which will be very useful. If you want to speak with us, you can just simply click us. You can move by pressing #bLeft and Right Arrows#k and jump by pressing #bAlt#k. Come on~ Try it! Also, sometimes you have to climb up a ladder or use a rope to get to the destination you want. You can do that by pressing the #bUp Arrow#k. Please keep this in mind."/>
+    <string name="d0" value="You must be a new traveler. Let me give you some instructions which will be very useful. If you want to speak with us, you can just simply click us. You can move by pressing #bLeft and Right Arrows#k and jump by pressing #bAlt#k. Come on~ Try it! Also, sometimes you have to climb up a ladder or use a rope to get to the destination you want. You can do that by pressing the #bUp Arrow#k. Please keep this in mind."/>
     <string name="d1" value="Now I can take a look at my face with this mirror. Phew~~ I&apos;m still alright."/>
   </imgdir>
   <imgdir name="2101000">
