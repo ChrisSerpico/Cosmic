@@ -2026,7 +2026,7 @@ public class Character extends AbstractCharacterObject {
                             } else if (ItemId.isNxCard(mapitem.getItemId())) {
                                 // Add NX to account, show effect and make item disappear
                                 int nxGain = mapitem.getItemId() == ItemId.NX_CARD_100 ? 100 : 250;
-                                this.getCashShop().gainCash(1, nxGain);
+                                this.getCashShop().gainCash(CashShop.NX_CREDIT, nxGain);
 
                                 if (YamlConfig.config.server.USE_ANNOUNCE_NX_COUPON_LOOT) {
                                     showHint("You have earned #e#b" + nxGain + " NX#k#n. (" + this.getCashShop().getCash(CashShop.NX_CREDIT) + " NX)", 300);
@@ -2078,7 +2078,7 @@ public class Character extends AbstractCharacterObject {
                     } else if (ItemId.isNxCard(mapitem.getItemId())) {
                         // Add NX to account, show effect and make item disappear
                         int nxGain = mapitem.getItemId() == ItemId.NX_CARD_100 ? 100 : 250;
-                        this.getCashShop().gainCash(1, nxGain);
+                        this.getCashShop().gainCash(CashShop.NX_CREDIT, nxGain);
 
                         if (YamlConfig.config.server.USE_ANNOUNCE_NX_COUPON_LOOT) {
                             showHint("You have earned #e#b" + nxGain + " NX#k#n. (" + this.getCashShop().getCash(CashShop.NX_CREDIT) + " NX)", 300);
