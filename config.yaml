@@ -3,18 +3,18 @@
 #Recommended to use only up to 15 worlds
 worlds:
     #Properties for Scania 0
-  - flag: 0
+  - flag: 2
     server_message: Welcome to Scania!
     event_message: Scania!
     why_am_i_recommended: Welcome to Scania!
-    channels: 3
-    exp_rate: 10
-    meso_rate: 10
-    drop_rate: 10
-    boss_drop_rate: 10                      #NOTE: Boss drop rate OVERRIDES common drop rate, for bosses-only.
-    quest_rate: 5                           #Multiplier for Exp & Meso gains when completing a quest. Only available when USE_QUEST_RATE is true. Stacks with server Exp & Meso rates.
-    fishing_rate: 10                        #Multiplier for success likelihood on meso thrown during fishing.
-    travel_rate: 10                         #Means of transportation rides/departs using 1/N of the default time.
+    channels: 1
+    exp_rate: 2
+    meso_rate: 3
+    drop_rate: 2
+    boss_drop_rate: 5                      #NOTE: Boss drop rate OVERRIDES common drop rate, for bosses-only.
+    quest_rate: 3                           #Multiplier for Exp & Meso gains when completing a quest. Only available when USE_QUEST_RATE is true. Stacks with server Exp & Meso rates.
+    fishing_rate: 5                        #Multiplier for success likelihood on meso thrown during fishing.
+    travel_rate: 6                         #Means of transportation rides/departs using 1/N of the default time.
 
     #Properties for Bera 1
   - flag: 0
@@ -162,7 +162,7 @@ server:
     DB_URL_FORMAT: "jdbc:mysql://%s:3306/cosmic" # If the docker ENV for DB_HOST is anything but "db", this string format should be changed from 3306 to 3307 (or whichever port it was changed to in docker) 
     DB_HOST: "localhost" 
     DB_USER: "root"
-    DB_PASS: ""
+    DB_PASS: "doublepopsicle"
     INIT_CONNECTION_POOL_TIMEOUT: 90    # Seconds
 
     #Login Configuration
@@ -179,9 +179,9 @@ server:
     UPDATE_INTERVAL: 777                #Dictates the frequency on which the "centralized server time" is updated.
 
     ENABLE_PIC: true               #Pick true/false to enable or disable Pic. Delete character requires PIC available.
-    ENABLE_PIN: true               #Pick true/false to enable or disable Pin.
+    ENABLE_PIN: false               #Pick true/false to enable or disable Pin.
 
-    BYPASS_PIC_EXPIRATION: 20           #Enables PIC bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
+    BYPASS_PIC_EXPIRATION: 1440           #Enables PIC bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
     BYPASS_PIN_EXPIRATION: 15           #Enables PIN bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
 
     AUTOMATIC_REGISTER: true        #Automatically register players when they login with a nonexistent username.
@@ -238,7 +238,7 @@ server:
     USE_SERVER_AUTOASSIGNER: false       #HeavenMS-builtin autoassigner, uses algorithm based on distributing AP accordingly with required secondary stat on equipments.
     USE_REFRESH_RANK_MOVE: true
     USE_ENFORCE_ADMIN_ACCOUNT: false    #Forces accounts having GM characters to be treated as a "GM account" by the client (localhost). Some of the GM account perks is the ability to FLY, but unable to TRADE.
-    USE_ENFORCE_NOVICE_EXPRATE: false    #Hardsets experience rate 1x for beginners level 10 or under. Ideal for roaming on novice areas without caring too much about losing some stats.
+    USE_ENFORCE_NOVICE_EXPRATE: true    #Hardsets experience rate 1x for beginners level 10 or under. Ideal for roaming on novice areas without caring too much about losing some stats.
     USE_ENFORCE_HPMP_SWAP: false        #Forces players to reuse stats (via AP Resetting) located on HP/MP pool only inside the HP/MP stats.
     USE_ENFORCE_MOB_LEVEL_RANGE: true   #Players N levels below the killed mob will gain no experience from defeating it.
     USE_ENFORCE_JOB_LEVEL_RANGE: false  #Caps the player level on the minimum required to advance their current jobs.
@@ -266,12 +266,12 @@ server:
     USE_OLD_GMS_STYLED_PQ_NPCS: true     #Enables PQ NPCs with similar behaviour to old GMS style, that skips info about the PQs and immediately tries to register the party in.
     USE_ENABLE_SOLO_EXPEDITIONS: false    #Enables start expeditions with any number of players. This will also bypass all the Zakum prequest.
     USE_ENABLE_DAILY_EXPEDITIONS: false  #Enables daily entry limitations in expeditions.
-    USE_ENABLE_RECALL_EVENT: false        #Enables a disconnected player to reaccess the last event instance they were in before logging out. Recall only works if the event isn't cleared or disposed yet. Suggestion thanks to Alisson (Goukken).
+    USE_ENABLE_RECALL_EVENT: true        #Enables a disconnected player to reaccess the last event instance they were in before logging out. Recall only works if the event isn't cleared or disposed yet. Suggestion thanks to Alisson (Goukken).
 
     #Announcement Configuration
     USE_ANNOUNCE_SHOPITEMSOLD: false    #Automatic message sent to owner when an item from the Player Shop or Hired Merchant is sold.
     USE_ANNOUNCE_CHANGEJOB: false       #Automatic message sent to acquantainces when changing jobs.
-    USE_ANNOUNCE_NX_COUPON_LOOT: false    #Enables or disables the floating text when a player loots a NX card
+    USE_ANNOUNCE_NX_COUPON_LOOT: true    #Enables or disables the floating text when a player loots a NX card
 
     #Cash Shop Configuration
     USE_JOINT_CASHSHOP_INVENTORY: false  #Enables usage of a same cash shop inventory for explorers, cygnus and legends. Items from exclusive cash shop inventories won't show up on the shared inventory, though.
@@ -285,7 +285,7 @@ server:
 
     #Commands Configuration
     BLOCK_GENERATE_CASH_ITEM: false     #Prevents creation of cash items with the item/drop command.
-    USE_WHOLE_SERVER_RANKING: false     #Enables a ranking pool made from every character registered on the server for the "ranks" command, instead of separated by worlds.
+    USE_WHOLE_SERVER_RANKING: true     #Enables a ranking pool made from every character registered on the server for the "ranks" command, instead of separated by worlds.
 
     EQUIP_EXP_RATE: 1.0                  #Rate for equipment exp gain, grows linearly. Set 1.0 for default (about 100~200 same-level range mobs killed to pass equip from level 1 to 2).
     PQ_BONUS_EXP_RATE: 0.5               #Rate for the PQ exp reward.
@@ -308,9 +308,9 @@ server:
     TOT_MOB_QUEST_REQUIREMENT: 0               #Overwrites old 999-mobs requirement for the ToT questline with new requirement value, set 0 for default.
     MOB_REACTOR_REFRESH_TIME: 0         # (30 * 1000) Overwrites refresh time for those reactors oriented to inflict damage to bosses (Ice Queen, Riche), set 0 for default.
     PARTY_SEARCH_REENTRY_LIMIT: 10              #Max amount of times a party leader is allowed to persist on the Party Search before entry expiration (thus needing to manually restart the Party Search to be able to search for members).
-    NAME_CHANGE_COOLDOWN: 2592000000      # (30*24*60*60*1000) Cooldown for name changes, default (GMS) is 30 days.
+    NAME_CHANGE_COOLDOWN: 60000      # (30*24*60*60*1000) Cooldown for name changes, default (GMS) is 30 days.
     WORLD_TRANSFER_COOLDOWN: 2592000000  # (30*24*60*60*1000) Cooldown for world tranfers, default is same as name change (30 days).
-    INSTANT_NAME_CHANGE: false              #Whether or not to wait for server restart to apply name changes. Does on reconnect otherwise (requires queries on every login).
+    INSTANT_NAME_CHANGE: true              #Whether or not to wait for server restart to apply name changes. Does on reconnect otherwise (requires queries on every login).
 
     #Dangling Items/Locks Configuration
     ITEM_EXPIRE_TIME: 180000    # (3 * 60 * 1000) Time before items start disappearing. Recommended to be set up to 3 minutes.
@@ -320,7 +320,7 @@ server:
 
     #Map Monitor Configuration
     ITEM_EXPIRE_CHECK: 10000        # (10 * 10000) Interval between item expiring tasks on maps, which checks and makes disappear expired items.
-    ITEM_LIMIT_ON_MAP: 200              #Max number of items allowed on a map.
+    ITEM_LIMIT_ON_MAP: 300              #Max number of items allowed on a map.
     MAP_VISITED_SIZE: 5                 #Max length for last mapids visited by a player. This is used to recover and update drops on these maps accordingly with player actions.
     MAP_DAMAGE_OVERTIME_INTERVAL: 2500  #Interval in milliseconds between map environment damage (e.g. El Nath and Aqua Road surrondings).
     MAP_DAMAGE_OVERTIME_COUNT: 2
@@ -335,7 +335,7 @@ server:
     #Some Gameplay Enhancing Configurations
     #Scroll Configuration
     USE_PERFECT_GM_SCROLL: true     #Scrolls from GMs never uses up slots nor fails.
-    USE_PERFECT_SCROLLING: false     #Scrolls doesn't use slots upon failure.
+    USE_PERFECT_SCROLLING: true     #Scrolls doesn't use slots upon failure.
     USE_ENHANCED_CHSCROLL: false     #Equips even more powerful with chaos upgrade.
     USE_ENHANCED_CRAFTING: false     #Apply chaos scroll on every equip crafted.
     SCROLL_CHANCE_ROLLS: 1         #Number of rolls for success on a scroll, set 1 for default.
@@ -361,7 +361,7 @@ server:
     USE_PERFECT_PITCH: false         #For lvl 30 or above, each lvlup grants player 1 perfect pitch.
 
     #Quest Configuration
-    USE_QUEST_RATE: false           #Exp/Meso gained by quests uses fixed server exp/meso rate times quest rate as multiplier, instead of player rates.
+    USE_QUEST_RATE: true           #Exp/Meso gained by quests uses fixed server exp/meso rate times quest rate as multiplier, instead of player rates.
 
     #Quest Points Configuration
     QUEST_POINT_REPEATABLE_INTERVAL: 25  #Minimum interval between repeatable quest completions for quest points to be awarded.
@@ -370,7 +370,7 @@ server:
     QUEST_POINT_PER_EVENT_CLEAR: 0       #Each completed event instance awards N quest points, set 0 to disable.
 
     #Guild Configuration
-    CREATE_GUILD_MIN_PARTNERS: 6         #Minimum number of members on Guild Headquarters to establish a new guild.
+    CREATE_GUILD_MIN_PARTNERS: 3        #Minimum number of members on Guild Headquarters to establish a new guild.
     CREATE_GUILD_COST: 1500000
     CHANGE_EMBLEM_COST: 5000000
     EXPAND_GUILD_BASE_COST: 500000
@@ -416,7 +416,7 @@ server:
     MOUNT_EXHAUST_COUNT: 1             #Number of proc counts (1 per minute) on the exhaust schedule for tiredness.
 
     #Pet Hunger Configuration
-    PETS_NEVER_HUNGRY: false        #If true, pets and mounts will never grow hungry.
+    PETS_NEVER_HUNGRY: true        #If true, pets and mounts will never grow hungry.
     GM_PETS_NEVER_HUNGRY: true      #If true, pets and mounts owned by GMs will never grow hungry.
 
     #Event Configuration
